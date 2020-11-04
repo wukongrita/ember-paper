@@ -63,7 +63,7 @@ class PaperSelectEbdContent extends Component {
 
   @action
   async animateOut(dropdownElement) {
-    let parentElement = this.renderInPlace ? dropdownElement.parentElement.parentElement : dropdownElement.parentElement;
+    let parentElement = this.renderInPlace ? dropdownElement.firstElementChild.parentElement : dropdownElement.firstElementChild;
     let clone = dropdownElement.cloneNode(true);
     clone.id = `${clone.id}--clone`;
     parentElement.appendChild(clone);
